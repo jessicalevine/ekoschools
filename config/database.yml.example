@@ -1,0 +1,16 @@
+common: &common
+  adapter: postgresql
+  username: example_user
+  password: example_password
+
+development:
+  <<: *common
+  database: ekoschools_development
+
+test:
+  <<: *common
+  database: ekoschools_test
+
+production:
+  <<: *common
+  database: ekoschools_production
