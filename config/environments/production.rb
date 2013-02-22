@@ -67,4 +67,16 @@ Ekoschools::Application.configure do
 
   # TODO Fix to actual host
   config.action_mailer.default_url_options = { :host => 'ekoschools' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'gmail.com',
+    :user_name            => ENV['MAIL_USERNAME'],
+    :password             => ENV['MAIL_PASSWORD'],
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+  }
+
 end
