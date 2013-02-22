@@ -1,0 +1,9 @@
+= form_for @organization do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :school
+    = f.text_field :school
+  .actions
+    = f.submit 'Save'

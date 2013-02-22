@@ -1,0 +1,10 @@
+%p
+  %b Name:
+  = @organization.name
+%p
+  %b School:
+  = @organization.school
+
+= link_to 'Edit', edit_organization_path(@organization)
+\|
+= link_to 'Back', organizations_path
