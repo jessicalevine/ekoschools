@@ -1,0 +1,19 @@
+%p
+  %b Name:
+  = @recipient.name
+%p
+  %b Phone:
+  = @recipient.phone
+%p
+  %b Email:
+  = @recipient.email
+%p
+  %b Needs:
+  = @recipient.needs
+%p
+  %b Address:
+  = @recipient.address
+
+= link_to 'Edit', edit_recipient_path(@recipient)
+\|
+= link_to 'Back', recipients_path

@@ -1,0 +1,18 @@
+= form_for @recipient do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :needs
+    = f.text_field :needs
+  .field
+    = f.label :address
+    = f.text_field :address
+  .actions
+    = f.submit 'Save'

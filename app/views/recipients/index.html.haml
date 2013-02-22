@@ -1,0 +1,27 @@
+%h1 Listing recipients
+
+%table
+  %tr
+    %th Name
+    %th Phone
+    %th Email
+    %th Needs
+    %th Address
+    %th
+    %th
+    %th
+
+  - @recipients.each do |recipient|
+    %tr
+      %td= recipient.name
+      %td= recipient.phone
+      %td= recipient.email
+      %td= recipient.needs
+      %td= recipient.address
+      %td= link_to 'Show', recipient
+      %td= link_to 'Edit', edit_recipient_path(recipient)
+      %td= link_to 'Destroy', recipient, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Recipient', new_recipient_path

@@ -1,4 +1,7 @@
 Ekoschools::Application.routes.draw do
+  resources :recipients
+
+
   resources :organizations
 
 
