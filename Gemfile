@@ -27,6 +27,9 @@ gem 'jquery-rails'
 
 gem 'thin'
 
+# Keep haml out of assets to avoid Heroku errors
+gem 'haml'
+
 # Authentication
 gem 'devise'
 
