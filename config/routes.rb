@@ -5,5 +5,7 @@ Ekoschools::Application.routes.draw do
 
   devise_for :users
 
+  match "/" => "pages#landing"
+
   root :to => "recipients#index"
 end
