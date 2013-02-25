@@ -1,1 +1,70 @@
 @import "base";
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#wrap {
+	@include grid-container;
+	z-index: 2;
+	height: 100%;
+	position: relative;
+}
+
+#pageheader {
+	@include grid(12,12);
+	height: $header_height;
+	margin-bottom: 27px;
+	position: relative;
+
+}
+#pagelogo{
+	position: absolute;
+    bottom: -4px;
+	width: 152px;
+	height: 128px;
+	background-image: image-url('logo.png');
+    
+}
+
+#contentcontainer {
+	@include grid(12,12);
+}
+
+#pagefooter {
+	@include grid(12,12);
+	height: $footer_height;
+	margin-top: 27px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+}
+
+#pageheader_back {
+    height: $header_height;
+    width: 100%;
+    background-color: $mint;
+    @include box-shadow(0px 5px 0px $white, 0px 27px 0px $beige);
+    margin-bottom: 27px;
+    position: absolute;
+    z-index: 1;
+}
+
+#pagefooter_back {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: $footer_height;
+    width: 100%;
+    background-color: $mint;
+    @include box-shadow(0px -5px 0px $white, 0px -27px 0px $beige);
+    margin-top: 27px;
+    z-index: 1;
+}
