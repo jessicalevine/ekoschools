@@ -9,4 +9,15 @@
     - flash.each do |name, msg|
       - if msg.is_a?(String)
         = content_tag :div, msg, :id => "flash_#{name}"
-    = yield
+    
+    
+    %header#pageheader
+      #pageheader_inner
+        %a#pagelogo{:href => "/"}
+    #wrap
+      #content-container
+        = yield
+    %footer#pagefooter
+      #pagefooter_inner
+
+

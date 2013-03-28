@@ -1,0 +1,56 @@
+@import "base";
+
+$listitem_size: 60px;
+
+#landing {
+	background-color: $chocolate;
+	@include grid(12,12);
+	@include border-radius(10px);
+	height: 490px;
+	margin-top: 30px;
+	position: relative;
+	@include quattrocento-bold;
+	color: $light-beige;
+		font-size: 40px;
+		line-height: 50px;
+		text-align: center;
+
+	#landing_inner {
+		background-color: $mint;
+		@include border-radius(10px);
+		height: 440px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		color: $white;
+		@include quattrocento-bold;
+
+		
+	}
+}
+
+#list {
+	@include grid(6,12);
+
+	.listitem {
+		font-size: $listitem_size;
+		line-height: 60px;
+		text-align: left;
+		margin-top: 1em;
+		margin-left: 1.5em;
+		height: 60px;
+		&:before {
+			content: attr(num);
+			background-color: $chocolate;
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			text-align: center;
+			line-height: 60px;
+			font-size: 40px;
+			margin-bottom: -10px;
+			@include border-radius($listitem_size/2)
+		}	
+	}
+}

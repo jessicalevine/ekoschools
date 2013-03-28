@@ -1,0 +1,30 @@
+@import "base";
+
+p:not(:last-of-type){
+	margin-bottom: 1em;
+}
+
+body {
+	@include quattrocento;
+}
+
+h1 {
+	@include quattrocento-bold;
+	font-size: 2em;
+	line-height: 2em;
+}
+
+.question {
+	@include quattrocento-bold;
+	margin-bottom: .5em !important;
+}
+
+.question:before {
+	content: "Q:";
+	margin-right: .5em;
+}
+
+p.answer:before {
+	content: "A:";
+	margin-right: .5em;
+}

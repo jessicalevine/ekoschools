@@ -1,0 +1,24 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "960/grid";
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700);
+
+$mint: #a2ba9e;
+$beige: #b2a283;
+$white: #ffffff;
+$chocolate: #7c6c4d;
+$light-beige: #e8e1d5;
+$light-mint: #d0dcce;
+
+$header_height: 132px;
+$footer_height: 85px;
+
+@mixin quattrocento-bold {
+	font-family: Quattrocento Sans, Sans;
+	font-weight: 700;
+}
+
+@mixin quattrocento {
+	font-family: Quattrocento Sans, Sans;
+}
