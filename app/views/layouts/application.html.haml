@@ -10,13 +10,14 @@
       - if msg.is_a?(String)
         = content_tag :div, msg, :id => "flash_#{name}"
     
-    #pageheader_back
+    
+    %header#pageheader
+      #pageheader_inner
+        %a#pagelogo{:href => "/"}
     #wrap
-      %header#pageheader
-        #pagelogo
-      #contentcontainer
+      #content-container
         = yield
-      %footer#pagefooter
-    #pagefooter_back
+    %footer#pagefooter
+      #pagefooter_inner
 
 

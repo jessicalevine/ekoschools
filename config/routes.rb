@@ -1,11 +1,11 @@
 Ekoschools::Application.routes.draw do
-  resources :recipients
+  # resources :recipients
 
-  resources :organizations
+  # resources :organizations
 
-  devise_for :users
+  # devise_for :users
 
-  match "/" => "pages#landing"
+  get "/" => "pages#mission"
 
-  root :to => "recipients#index"
+  root :to => "pages#mission"
 end
