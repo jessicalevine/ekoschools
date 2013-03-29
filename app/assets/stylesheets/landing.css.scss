@@ -3,54 +3,69 @@
 $listitem_size: 60px;
 
 #landing {
-	background-color: $chocolate;
-	@include grid(12,12);
-	@include border-radius(10px);
-	height: 490px;
-	margin-top: 30px;
-	position: relative;
-	@include quattrocento-bold;
-	color: $light-beige;
-		font-size: 40px;
-		line-height: 50px;
-		text-align: center;
+  background-color: $chocolate;
+  @include grid(12,12);
+  @include border-radius(10px);
+  height: 490px;
+  margin-top: 30px;
+  position: relative;
+  @include quattrocento-bold;
+  color: $light-beige;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
 
-	#landing_inner {
-		background-color: $mint;
-		@include border-radius(10px);
-		height: 440px;
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		color: $white;
-		@include quattrocento-bold;
+  #landing_inner {
+    background-color: $mint;
+    @include border-radius(10px);
+    height: 440px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: $white;
+    @include quattrocento-bold;
 
-		
-	}
+    
+  }
 }
 
 #list {
-	@include grid(6,12);
+  @include grid(6,12);
+  margin-right: 0px;
 
-	.listitem {
-		font-size: $listitem_size;
-		line-height: 60px;
-		text-align: left;
-		margin-top: 1em;
-		margin-left: 1.5em;
-		height: 60px;
-		&:before {
-			content: attr(num);
-			background-color: $chocolate;
-			height: 60px;
-			width: 60px;
-			display: inline-block;
-			text-align: center;
-			line-height: 60px;
-			font-size: 40px;
-			margin-bottom: -10px;
-			@include border-radius($listitem_size/2)
-		}	
-	}
+  .listitem {
+    font-size: $listitem_size;
+    line-height: 60px;
+    text-align: left;
+    margin-top: 1em;
+    margin-left: 1.75em;
+    height: 60px;
+    &:before {
+      content: attr(num);
+      background-color: $chocolate;
+      height: 60px;
+      width: 60px;
+      display: inline-block;
+      text-align: center;
+      line-height: 60px;
+      font-size: 40px;
+      margin-bottom: -10px;
+      @include border-radius($listitem_size/2)
+    }  
+  }
+}
+
+.description {
+	background-color: $light-mint;
+	margin: 50px;
+	height: 340px;
+	width: 340px;
+	display: none;
+  @include border-radius(10px);
+  margin-left: 0px;
+  margin-right: 75px;
+  float: right;
+  padding: 25px;
+  box-sizing: border-box;
 }

@@ -7,5 +7,7 @@ Ekoschools::Application.routes.draw do
 
   get "/" => "pages#mission"
 
+  get "/landing" => "pages#landing"
+
   root :to => "pages#mission"
 end
